@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import 'variables';
+@import 'navbar';
+@import 'sidebar';
+@import 'submenu';
+@import 'search';
+
+/* 
+  ====== 
+  Global Styles 
+  ======
+  */
+
+  
+  body {
+    font-family:$font-stack;
+    color: $clr-black;
+    background: $clr-main-bg;
+    line-height: 1.4;
+    font-size: $fs-body;
+    font-weight: 400;
+  }
+
+  .cocktail-app-container{
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $font-stack;
+    margin-bottom: 1.25rem;
+    letter-spacing: $spacing;
+  }
+
+  h1{font-size: $fs-h1-sm;}
+  h2{font-size: $fs-h2-sm;}
+  h3{font-size: $fs-h3-sm;}
+  h4{font-size: $fs-h4-sm;}
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $clr-darkColor;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  @media screen and (min-width: 768px){
+    h1{font-size: $fs-h1-md;}
+    h2{font-size: $fs-h2-md;}
+    h3{font-size: $fs-h3-md;}
+    h4{font-size: $fs-h4-md;}
+  }

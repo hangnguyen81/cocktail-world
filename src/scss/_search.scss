@@ -1,0 +1,35 @@
+.search{
+    display: flex;
+    justify-content: center;
+
+    &-container{
+        width: 80%;
+        box-shadow: $darkShadow;
+        border-radius: $borderRadius;
+        margin-top: 2rem;
+        padding: 2rem;
+        background: $clr-white
+    }
+    input{
+        display: block;
+        width: 100%;
+        padding: .5rem 1rem;
+        background:$clr-main-bg;
+        border:0;
+        font-size: $fs-h3-sm;
+        border-radius: $borderRadius ;
+    }
+
+    input:focus{
+        outline: none;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .search-container{
+        width: $fixWidth;
+    }
+}
+
+
+

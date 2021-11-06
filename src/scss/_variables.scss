@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+$clr-darkColor: #047400;
+$clr-lightColor: #a5e6b0;
+$clr-main-bg: #d8fcd8;
+$clr-white:#fff;
+$clr-black:#000;
+
+$transition: all 0.3s linear;
+$spacing: 0.3rem;
+
+$lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$darkShadow: 4px 10px 5px rgba(0, 0, 0, 0.5);
+
+$borderRadius: 0.25rem;
+$fullWidth: 1140px;
+$fixWidth: 620px;
+
+$font-stack: 'Lato', sans-serif;
+/* Small screen */
+$fs-body: 1rem;
+$fs-h1-sm:3rem;
+$fs-h2-sm:2rem;
+$fs-h3-sm:1.25rem;
+$fs-h4-sm:.825rem;
+/* Screen larger than 768px */
+$fs-h1-md:4rem;
+$fs-h2-md:2.5rem;
+$fs-h3-md:1.75rem;
+$fs-h4-md:1rem;
+$fs-body-md: 1.25rem;
