@@ -5,6 +5,7 @@ import History from './pages/History';
 import Types from './pages/Types';
 import SingleCocktail from './pages/SingleCocktail';
 import Footer from './pages/Footer';
+import Error from './pages/Error';
 
 import Navbar from './components/Navbar';
 import Submenu from './components/Submenu';
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/cocktail/:id">
           <SingleCocktail />
+        </Route>
+        <Route path="/*">
+          <Error />
         </Route>
       </Switch>
       <Footer/>

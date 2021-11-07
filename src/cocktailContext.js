@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { mainMenu } from './data';
 
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const CocktailContext = React.createContext();
 
 const CocktailContextProvider = ({children}) =>{
@@ -20,7 +21,10 @@ const CocktailContextProvider = ({children}) =>{
         setIsSubmenuOpen(true);
     } 
     const closeSubmenu = () => setIsSubmenuOpen(false);
-
+    //handling search and display cocktails
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('a');
+    const [cocktails, setCocktails] = useState([])
     return(
         <CocktailContext.Provider
             value = {{
@@ -31,7 +35,11 @@ const CocktailContextProvider = ({children}) =>{
                 openSubmenu,
                 closeSubmenu,
                 page,
-                location}}>
+                location,
+                loading,
+                searchTerm,
+                cocktails,
+                setSearchTerm}}>
             {children}
         </CocktailContext.Provider>
     )

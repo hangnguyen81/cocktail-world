@@ -1,0 +1,53 @@
+
+.btn,
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  color: $clr-darkColor;
+  border: 2px solid $clr-darkColor;
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: $transition;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: $borderRadius;
+  display: inline-block;
+}
+.btn:hover {
+  background: $clr-darkColor;
+  color: $clr-white;
+}
+.btn-white {
+  background: transparent;
+  color: $clr-white;
+  border-color: $clr-white;
+}
+.btn-white:hover {
+  background: $clr-white;
+  color: $clr-darkColor;
+}
+.btn-primary {
+  background: $clr-darkColor;
+  color: $clr-white;
+  border-color: transparent;
+}
+.btn-primary:hover {
+  background: $clr-darkColor;
+  color: $clr-darkColor;
+}
+.btn-block {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: $lightShadow;
+  text-align: center;
+}
+.btn-details {
+  padding: 0.25rem 0.4rem;
+}
+.btn-details:hover {
+  background: $clr-darkColor;
+  border-color: $clr-darkColor;
+}

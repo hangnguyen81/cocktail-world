@@ -1,11 +1,13 @@
 
 import Search from "../components/Search";
+import CocktailList from "../components/CocktailList";
 
 function Home(){
     return (
-        <div className="cocktail-app-container">
+        <main className="cocktail-app-container">
             <Search/>
-      </div>
+            <CocktailList/>
+      </main>
     )
 }
 

@@ -39,7 +39,7 @@
     }
   }
 
-  .btn {
+  .btn-toggle {
     font-size: 1rem;
     padding: 0.5rem 0.75rem;
     border-radius: $borderRadius;
@@ -49,13 +49,13 @@
     cursor: pointer;
   }
 
-  .btn:hover {
+  .btn-toggle:hover {
     background: $clr-lightColor;
   }
 
   
   @media screen and (min-width: 768px){
-    .btn{
+    .btn-toggle{
       display: none;
     }
     .nav-center{

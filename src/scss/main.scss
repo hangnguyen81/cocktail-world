@@ -4,6 +4,8 @@
 @import 'sidebar';
 @import 'submenu';
 @import 'search';
+@import 'button';
+@import 'loading';
 
 /* 
   ====== 
@@ -65,12 +67,12 @@
 
   // Other pages
 
-  .section{
-    max-width: $fullWidth;
-    width: 90%;
-    padding: 1rem;
-    margin: 1rem auto;
-  }
+.section{
+  max-width: $fullWidth;
+  width: 90%;
+  padding: 1rem;
+  margin: 1rem auto;
+}
 .section-title{
   text-align: center;
 }

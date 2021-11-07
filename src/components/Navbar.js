@@ -23,7 +23,7 @@ export default function Navbar(){
                         <FaCocktail className='nav-logo-icon'/>
                         <span className='nav-logo-text'>Cocktail world</span>
                     </Link>               
-                    <button className='btn' onClick={openSidebar} ><FaBars/> </button>
+                    <button className='btn-toggle' onClick={openSidebar} ><FaBars/> </button>
                 </div>  
                 <div className='nav-links'>              
                     <ul className='links'>
