@@ -1,14 +1,15 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Definition from './pages/Definition';
 import History from './pages/History';
 import Types from './pages/Types';
-import SingleCocktail from './pages/SingleCocktail'
+import SingleCocktail from './pages/SingleCocktail';
+import Footer from './pages/Footer';
 
 import Navbar from './components/Navbar';
 import Submenu from './components/Submenu';
 import Sidebar from './components/Sidebar';
+
 
 function App() {
   return (
@@ -19,9 +20,6 @@ function App() {
       <Switch>
         <Route exact path='/'>
             <Home/>
-        </Route>
-        <Route path='/definition'>
-          <Definition/>
         </Route>
         <Route path='/history'>
           <History/>
@@ -36,6 +34,7 @@ function App() {
           <SingleCocktail />
         </Route>
       </Switch>
+      <Footer/>
     </Router>
   );
 }

@@ -62,3 +62,23 @@
     h3{font-size: $fs-h3-md;}
     h4{font-size: $fs-h4-md;}
   }
+
+  // Other pages
+
+  .section{
+    max-width: $fullWidth;
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+.section-title{
+  text-align: center;
+}
+
+//Footer
+.footer{
+  max-width: $fullWidth;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}

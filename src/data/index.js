@@ -5,7 +5,7 @@ export const mainMenu = [
     {
         page: 'Brief intro',
         links:[
-            {label:'What is cocktail',icon:<BiDrink/>, url:'/definition'},
+            {label:'What is cocktail',icon:<BiDrink/>, url:'/history'},
             {label:'Cocktail stories',icon:<BiHistory/>, url:'/history'}
         ]
     },
@@ -21,7 +21,7 @@ export const mainMenu = [
         page: 'About',
         links:[
             {label:'About us',icon:<FaPuzzlePiece/>, url:'/about'},
-            {label:'Our mission',icon:<GiMissilePod/>, url:'/types'},
+            {label:'Our mission',icon:<GiMissilePod/>, url:'/about'},
         ]
     }
 ]

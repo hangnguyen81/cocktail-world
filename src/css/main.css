@@ -367,4 +367,22 @@ img {
     font-size: 1rem;
   }
 }
+
+.section {
+  max-width: 1140px;
+  width: 90%;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.footer {
+  max-width: 1140px;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

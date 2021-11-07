@@ -18,7 +18,7 @@ function Sidebar(){
                                 <ul>
                                 {links.map((link,i) =>{
                                     const {label, icon, url} = link;
-                                    return <li key={i}><Link to={url}>{icon} {label}</Link></li>
+                                    return <li key={i}><Link to={url} onClick={closeSidebar}>{icon} {label}</Link></li>
                                 })}
                                 </ul>
                                 
