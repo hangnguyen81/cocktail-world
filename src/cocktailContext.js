@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useEffect, useContext, useCallback} from 'react';
 import { mainMenu } from './data';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
@@ -21,10 +21,51 @@ const CocktailContextProvider = ({children}) =>{
         setIsSubmenuOpen(true);
     } 
     const closeSubmenu = () => setIsSubmenuOpen(false);
+
     //handling search and display cocktails
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('a');
     const [cocktails, setCocktails] = useState([])
+
+    const fetchCocktails = useCallback(async () =>{
+        setLoading(true);
+        try {
+            const res = await fetch(`${url}${searchTerm}`);
+            const data = await res.json();
+            const {drinks} = data;
+            if (drinks){
+                const newCocktails = drinks.map(item =>{
+                    const { idDrink, 
+                            strDrink,
+                            strDrinkThumb,
+                            strAlcoholic, 
+                            strGlass, 
+                            strInstructions} = item;
+                    return {
+                        id: idDrink,
+                        name: strDrink,
+                        imgUrl:strDrinkThumb,
+                        info: strAlcoholic,
+                        glass: strGlass,
+                        intruction: strInstructions
+                    }
+                })
+                setCocktails(newCocktails);
+            }
+            else{
+                setCocktails([]);
+            }
+            setLoading(false);
+        }catch (error){
+            console.log(error);
+            setLoading(false);
+        }  
+    },[searchTerm])
+
+    useEffect(()=>{
+        fetchCocktails();
+    },[searchTerm, fetchCocktails]);
+
     return(
         <CocktailContext.Provider
             value = {{
