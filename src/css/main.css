@@ -292,6 +292,17 @@ article li {
   }
 }
 
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .btn {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -311,6 +322,43 @@ article li {
 .btn:hover {
   background: #047400;
   color: #fff;
+}
+
+.btn-page {
+  width: 2rem;
+  height: 2rem;
+  background: #a5e6b0;
+  color: #000;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.btn-active {
+  background: #047400;
+  color: #fff;
+}
+
+.btn-prev,
+.btn-next {
+  background: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 775px) {
+  .btn-container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }
 
 .loader,

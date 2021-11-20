@@ -1,4 +1,10 @@
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .btn{
   text-transform: uppercase;
   letter-spacing: $spacing;
@@ -16,4 +22,38 @@
 .btn:hover {
   background: $clr-darkColor;
   color: $clr-white;
+}
+
+.btn-page {
+  width: 2rem;
+  height: 2rem;
+  background: $clr-lightColor;
+  color: $clr-black;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: $transition;
+}
+.btn-active {
+  background: $clr-darkColor;
+  color: $clr-white;
+}
+.btn-prev,
+.btn-next {
+  background: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: $spacing;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 775px) {
+  .btn-container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }

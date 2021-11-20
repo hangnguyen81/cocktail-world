@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext, useCallback} from 'react';
 import { mainMenu } from './data';
+import paginate from './utils/paginate';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const CocktailContext = React.createContext();
@@ -50,7 +51,7 @@ const CocktailContextProvider = ({children}) =>{
                         intruction: strInstructions
                     }
                 })
-                setCocktails(newCocktails);
+                setCocktails(paginate(newCocktails));
             }
             else{
                 setCocktails([]);
