@@ -9,29 +9,36 @@ const CocktailList = () => {
     const [cocktailsInPage, setCocktailsInPage] = useState([])
 
   useEffect(()=>{
-       if (loading)
-        return setCocktailsInPage(cocktails[page]) 
-    },[page, cocktails, loading])
-  
+    setCocktailsInPage(cocktails[page]);
+  },[cocktails, page])
+
   const handlePage = (index) =>{
     setPage(index);
   }
 
-    if (loading)
-      return <Loading/>
+  const nextPage = () =>{
+    let nextPage = page + 1;
+    if (nextPage > cocktails.length - 1)
+      nextPage = 0;
+    return setPage(nextPage);
+  }
 
-    if (cocktails.length < 1)
-      return(
-         <div className='section-title'>
-           <h4>No cocktail matches your search!</h4>
-         </div>
-    )
+  const prevPage = () =>{
+    let prevPage = page - 1;
+    if (prevPage < 0 )
+      prevPage = cocktails.length-1;
+    return setPage(prevPage);
+  }
 
+  if (loading)
+    return <Loading/>
 
-
-    console.log(page);
-    console.log(cocktailsInPage);
-
+  if (cocktails.length < 1)
+    return(
+        <div className='section-title'>
+          <h4>No cocktail matches your search!</h4>
+        </div>
+  )
 
   return (
     <div className='section'>
@@ -40,7 +47,7 @@ const CocktailList = () => {
         {cocktailsInPage.map((item,i) => <Cocktail key={i} {...item}/>)}
       </div>
       {!loading && <div className='btn-container'>
-        <button className='btn-prev'>Prev </button>
+        <button className='btn-prev' onClick={prevPage}>Prev </button>
         {cocktails.map((item, index)=>{
           return <button 
                     key={index} 
@@ -50,7 +57,7 @@ const CocktailList = () => {
                     {index+1}          
                   </button>
         })}
-        <button className='btn-next'>Next</button>
+        <button className='btn-next' onClick={nextPage}>Next</button>
         </div>}
 
     </div>
